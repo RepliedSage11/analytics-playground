@@ -23,6 +23,17 @@
 <body>
     <h1>Welcome to My Example Page</h1>
     <p>This is a basic example page with relevant metadata.</p>
+    <button onclick="logEvent()">Log Event</button>
+
+    <script>
+        function logEvent() {
+            gtag('event', 'example_event', {
+                'event_category': 'Button Click',
+                'event_label': 'Example Button'
+            });
+        }
+    </script>
+
 </body>
 
 </html>
