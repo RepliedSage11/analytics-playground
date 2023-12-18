@@ -16,22 +16,28 @@
 
     gtag('config', 'G-EP8ZCZ0XF6', {
         'debug_mode': true,
-        'user_id': '123'
     });
 </script>
 
 <body>
-    <h1>Welcome to My Example Page</h1>
+    <h1>Analytics playground</h1>
     <p>This is a basic example page with relevant metadata.</p>
-    <button onclick="logEvent()">Log Event</button>
-
+    <button onclick="logButtonEvent()">Log button Event</button>
+    <button onclick="setUserId()">Set User ID</button>
     <script>
-        function logEvent() {
+        function logButtonEvent() {
             gtag('event', 'example_event', {
                 'event_category': 'Button Click',
                 'event_label': 'Example Button'
             });
         }
+
+        function setUserId() {
+            gtag('config', 'G-EP8ZCZ0XF6', {
+                'user_id': '123',
+            });
+        }
+
     </script>
 
 </body>
